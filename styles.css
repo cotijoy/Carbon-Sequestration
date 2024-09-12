@@ -1,0 +1,45 @@
+body, html {
+    height: 100%;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif; /* 使用广泛支持的字体 */
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.app-container {
+    text-align: center;
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    resize: both;
+    overflow: hidden;
+    min-width: 300px;
+    min-height: 200px;
+}
+
+.counter-display {
+    font-family: Arial, Helvetica, sans-serif; /* 使用非等宽字体 */
+    font-size: 4vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;  /* 确保宽度足够容纳最大可能值 */
+    text-align: center; /* 保证文本居中显示 */
+    overflow: hidden; /* 防止内容溢出 */
+    min-width: 300px; /* 根据需要调整，确保能容纳最大数字 */
+}
+
+
+input[type="number"], button {
+    font-size: 1.2vw;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+button {
+    cursor: pointer;
+}
