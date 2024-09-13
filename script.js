@@ -14,14 +14,8 @@ function startCounter() {
         return;
     }
     counterValue = initialInput;
-    input.style.display = 'none'; // Hide the input box
-    startButton.style.display = 'none'; // Hide the start button
-
-    // Update the display to center the text
-    display.style.display = 'flex';  // Enable flexbox
-    display.style.alignItems = 'center';  // Center vertically
-    display.style.justifyContent = 'center';  // Center horizontally
-    display.style.height = '100%';  // Take full height of its container
+    input.style.display = 'none';
+    startButton.style.display = 'none';
 
     updateDisplay();
 }
@@ -29,17 +23,16 @@ function startCounter() {
 function updateDisplay() {
     if (counterValue <= max_value) {
         counterValue += rate_per_second * 0.1;
-        display.textContent = `${counterValue.toFixed(2)} kg`; // 保持两位小数
+        display.textContent = `${counterValue.toFixed(2)} kg`;
         setTimeout(updateDisplay, 100);
     } else {
         counterValue = max_value;
-        display.textContent = `${counterValue.toFixed(2)} kg`; // 保持两位小数
+        display.textContent = `${counterValue.toFixed(2)} kg`;
     }
 }
 
-
 function resizeFont() {
-    const fontSize = Math.max(appContainer.clientWidth / 10, 20); // Dynamic font size based on container width
+    const fontSize = Math.max(appContainer.clientWidth / 10, 20);
     display.style.fontSize = `${fontSize}px`;
 }
 
@@ -49,7 +42,5 @@ const resizeObserver = new ResizeObserver(entries => {
     }
 });
 
-resizeObserver.observe(appContainer); // Observe the size of the app container
-
-// Initial font size adjustment
+resizeObserver.observe(appContainer);
 window.addEventListener('load', resizeFont);
