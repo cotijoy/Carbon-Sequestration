@@ -1,45 +1,61 @@
 body, html {
     height: 100%;
     margin: 0;
-    font-family: Arial, Helvetica, sans-serif; /* 使用广泛支持的字体 */
-    background-color: #f0f0f0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #004643;
+    color: white;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
 .app-container {
+    width: 60vw;
+    padding: 40px;
+    background-color: #008060;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
     text-align: center;
-    padding: 20px;
-    background-color: #fff;
-    border: 1px solid #ccc;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-    resize: both;
-    overflow: hidden;
-    min-width: 300px;
-    min-height: 200px;
 }
 
-.counter-display {
-    font-family: Arial, Helvetica, sans-serif; /* 使用非等宽字体 */
-    font-size: 4vw;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100%;
-    width: 100%;  /* 确保宽度足够容纳最大可能值 */
-    text-align: center; /* 保证文本居中显示 */
-    overflow: hidden; /* 防止内容溢出 */
-    min-width: 300px; /* 根据需要调整，确保能容纳最大数字 */
+header {
+    margin-bottom: 30px;
 }
 
-
-input[type="number"], button {
-    font-size: 1.2vw;
-    padding: 10px;
+.logo {
+    height: 80px;
+    width: 120px;
     margin-bottom: 10px;
 }
 
-button {
+.counter-display {
+    font-size: 5em;
+    color: white;
+    margin: 20px 0;
+    padding: 20px;
+    background-color: #00A86B;
+    border-radius: 5px;
+}
+
+.controls input, .controls button {
+    font-size: 1.2em;
+    padding: 12px;
+    margin: 10px;
+    width: 50%;
+    border: none;
+    border-radius: 5px;
+    color: #004643;
+    background-color: #f0f0f0;
+}
+
+.controls button {
+    background-color: #f0f0f0;
+    color: #004643;
     cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.controls button:hover {
+    background-color: #008060;
+    color: white;
 }
