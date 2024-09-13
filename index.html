@@ -9,10 +9,16 @@
 </head>
 <body>
 <div class="app-container">
-    <div id="counter-display" class="counter-display">0.00 kg</div>
-    <input type="number" id="initial-value-input" placeholder="Enter initial value (0.00 - 8220.00)" min="0" max="8220">
-    <button id="start-button" onclick="startCounter()">Start Counter</button>
-</div>    
+    <header>
+        <img src="logo.png" alt="Bionua Logo" class="logo">
+        <h1>Today's Carbon Sequestration</h1>
+    </header>
+    <div class="counter-display" id="counter-display">0.00 kg</div>
+    <div class="controls">
+        <input type="number" id="initial-value-input" placeholder="Enter initial value (0.00 - 8220.00)">
+        <button id="start-button" onclick="startCounter()">Start Counter</button>
+    </div>
+</div>
 <script src="script.js"></script>
 </body>
 </html>
